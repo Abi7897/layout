@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .grid-container{
+        display: grid;
+        grid-template-columns: 250px  880px 185px ;
+        grid-template-rows: 100px 250px 100px 60px;
+        grid-gap: 10px;
+        background-color: white;
+        padding: 5px;
+        border: 1px solid black;   
+    }
+    .item{
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+      border:1px solid black;
+    }
+    .item1{
+        grid-column: 1/span 3;
+        background-color: red;
+        color: white; 
+    }
+    .item2{
+        grid-row: 2/span 3;
+        background-color: blue;
+        padding-top: 200px;  
+        color: white;     
+    }
+    .item4{
+        grid-area: 2/3/4/4;
+        background-color: green;
+        padding-top: 150px;
+        color: white; 
+    }
+    .item3{
+        grid-area: 2/2/5/3;       
+        grid-column-start: 2;
+        grid-column-end: 4; 
+        background-color: yellow;
+        padding-top: 200px; 
+        padding-right: 150px;
+         }
+    .item5{
+        grid-column: 1/4;
+        background-color: lightseagreen;
+        color: white; 
+    }
+</style>
+<body>
+    <div class="grid-container">
+        <div class="item item1">Header</div>
+        <div class="item item2">Navigation</div>
+        <div class="item item3">Content</div>
+        <div class="item item4">Sidebar</div>
+        <div class="item item5">Footer</div>
+    </div>    
+</body>
+</html>
